@@ -26,12 +26,16 @@ class Retangulo{
 
     public void criarRetangulo(int largura, double angulo){
         setLargura(largura);
-        setAltura((int)((double)largura*(double)(Math.tan(Math.toRadians(angulo)))));
-        System.out.println(Math.tan(Math.toRadians(angulo)));
+        setAltura((int)((double)largura/(double)(Math.tan(Math.toRadians(angulo)))));
     }
 
     public void criarRetangulo(double diagonal,int angulo){
-        setAltura((int)(Math.asin(angulo)*diagonal));
-        setLargura((int)(Math.acos(angulo)*diagonal));
+        setAltura((int)(Math.sin(Math.toRadians(angulo))*diagonal));
+        setLargura((int)(Math.cos(Math.toRadians(angulo))*diagonal));
+    }
+
+    public void criarRetangulo(double altura, double angulo){
+        setAltura((int)altura);
+        setLargura((int)((double)altura*(double)(Math.tan(Math.toRadians(angulo)))));
     }
 }
