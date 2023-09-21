@@ -38,4 +38,12 @@ class Retangulo{
         setAltura((int)altura);
         setLargura((int)((double)altura*(double)(Math.tan(Math.toRadians(angulo)))));
     }
+
+    public boolean aiDento(int x,int y){
+        if(getAltura()>=y && getLargura()>=x){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
